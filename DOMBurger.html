@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <style>
+      div {
+        width: 80vw;
+        height: 110%;
+        margin: auto;
+        background-color: #d9d9d9;
+        text-align: center;
+        padding-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Enter the amount of burgers you want to order.</h1>
+      <input type="number" id="quantity">
+    
+      <script>
+        var hamburger = {
+          meat: "beef",
+          veg: "lettuce",
+          cheese: "mozzarella",
+          mayo: true,
+          mustard: false,
+          ketchup: true,
+          bbq: false,
+          salt: true,
+          pepper: true,
+          price: 7,
+          qty: 1
+        }
+        function buyMe() {
+          var qty = document.getElementById('quantity').value;
+          var total = ((qty * hamburger.price) * 1.04712).toFixed(2);
+          document.getElementById('placeHere').innerHTML = "You owe $" + total;
+        }
+      </script>
+    
+    <button onclick="buyMe()">Place Order</button>
+    <h2 id="placeHere"></h2>
+    
+    </div>
+  </body>
+</html>
