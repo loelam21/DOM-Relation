@@ -1,0 +1,19 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <input type="text" id="user">
+    <script>
+      function sayHello() {
+        var x = document.getElementById('user').value; //gets value from the user id. user id is in input. then it saves it as x
+        //document.getElementById('user') = ""; //clears value of user by setting it to nothing
+        document.getElementById('placeHere').innerHTML = "Hello " + x;
+      }
+    </script>
+    
+    <button onclick="sayHello()">Click Me</button>
+    <h1 id="placeHere"></h1>
+  </body>
+  
+</html>
