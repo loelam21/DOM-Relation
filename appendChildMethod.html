@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <button onclick="aloha()">Aloha Button</button>
+    <ul>
+      <li>This is the first thing.</li>
+    </ul>
+    <script>
+      function aloha() {
+        var ulTag = document.getElementsByTagName('ul')[0]; //find 0 position of ul. save as ulTag
+        var newItem = document.createElement('li'); //create list item(li) and save it as newItem
+        ulTag.appendChild(newItem); //attach them together; not attached to body yet
+        var newText = document.createTextNode("Aloha!!!"); //create "aloha"
+        newItem.appendChild(newText); //attach newText to newItem
+        document.body.appendChild(ulTag); //attaches everything(ulTag) to body
+      }
+    </script>
+  </body>
+</html>
