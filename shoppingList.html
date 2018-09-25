@@ -1,0 +1,26 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <input type="text" id="userInput">
+    <button onclick="shoppingList()">Click Me</button>
+    <ol></ol>
+    <script>
+      //Goal: You will be building an empty list; when a user enters values into a text box field, it will be added into the list
+      //Build a text box
+      //When user clicks a button...
+        //Take the value and save it as a varaible
+        //Clear the text box
+        //Add what they typed to an ordered list
+      function shoppingList() {
+        var saveUserInput = document.getElementById('userInput').value; //saves the value of what the user inputs into "saveUserInput"
+        document.getElementById('userInput').value = ""; //clear user's input
+        var createListElement = document.createElement('li'); //create list element(li) and save as "createListElement"
+        var createTextNode = document.createTextNode(saveUserInput); //create a text node(document.createTextNode) from what the user inputs('saveUserInput') and save as "createTextNode"
+        var olTag = document.getElementsByTagName('ol')[0]; //call the first ol(bc 0 index position) and save it as "olTag"
+        createListElement.appendChild(createTextNode); //append user's input(createTextNode) to the list(createListElement)
+        olTag.appendChild(createListElement); //append the list(createListElement) to the ordered list(olTag)
+      }
+    </script>
+  </body>
+</html>
