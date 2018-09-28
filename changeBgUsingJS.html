@@ -1,0 +1,25 @@
+<html>
+  <body>
+    <input type="text" id="userColor">
+    <button onclick="submitColor()">Enter your Hexadecimal Color</button>
+    <button onclick="changeMe()">Change Background</button>
+    <script>
+      var colors = [
+        "#00b4cc",
+        "#27f59e",
+        "#cb9d1d",
+        "#000080"
+      ];
+      function submitColor() {
+        var uColor = document.getElementById('userColor').value;
+        document.getElementById('userColor').value = "";
+        colors.push(uColor);
+      }
+      function changeMe() {
+        var rand = Math.floor(Math.random() * colors.length);
+        document.body.style.backgroundColor = colors[rand];
+      }
+    </script>
+  </body>
+  
+</html>
